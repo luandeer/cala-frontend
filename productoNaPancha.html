@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/output.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="w-full  fixed top-0 z-40 bg-[#1B58CD] h-[80px] flex items-center">
+    <nav class="w-full px-8 md:px-10  h-full flex items-center">
+      <div class="max-w-[1440px] mx-auto flex items-center justify-between  w-full" data-aos="fade-down"
+        data-aos-duration="900" data-aos-easing="ease-out-sine" data-aos-once="true">
+        <a href="/">
+          <img src="/img/logo.svg" alt="logo" class="logo object-cover w-[130px]" /></a>
+        <div class="hidden lg:flex items-center gap-[1.5rem] xl:gap-[2rem] justify-center text-white container-links">
+          <a href="/nosotros.html" class="menu__link">Nosotros</a>
+          <a href="/marcas.html" class="menu__link">Marcas</a>
+          <a href="/responsabilidadSocial.html" class="menu__link">Responsabilidad Social </a>
+          <a href="/noticias.html" class="menu__link">Noticias</a>
+          <a href="/contacto.html" class="menu__link">Contacto</a>
+          <div class="">
+            <div class="unique-select-container relative w-full" data-name="paisWeb">
+              <button
+                class="unique-select-trigger font-inter text-white text-[12px] relative rounded-full h-[35px] min-w-[105px] max-w-[105px] w-full flex items-center gap-0 bg-transparent border border-white px-4 text-left focus:outline-none"
+                aria-haspopup="listbox" aria-expanded="false">
+                <span class="unique-select-display w-full flex items-center gap-1.5 font-semibold">
+                  PER <img src="img/peru.svg" alt="Perú" class="w-4 h-4 ">
+                </span>
+                <span class="flex items-center pointer-events-none w-fit">
+                  <img src="img/arrow.svg" class="w-max h-full rotate-90 object-cover" alt="">
+                </span>
+              </button>
+              <ul
+                class="unique-select-options absolute z-50 font-inter text-[16px] mt-2 min-w-[130px] max-w-[130px] w-full bg-white rounded-[12px] shadow-[0px_47px_13px_0px_rgba(94,_128,_158,_0.00),_0px_30px_12px_0px_rgba(94,_128,_158,_0.01),_0px_17px_10px_0px_rgba(94,_128,_158,_0.05),_0px_7px_7px_0px_rgba(94,_128,_158,_0.09),_0px_2px_4px_0px_rgba(94,_128,_158,_0.10)] hidden max-h-60 overflow-auto"
+                role="listbox"></ul>
+              <input type="hidden" name="paisWeb" value="PER"> <!-- Valor predeterminado -->
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+
+
+        <div class="flex items-center gap-4 lg:hidden">
+          <div class="w-full">
+            <div class="unique-select-container relative w-full" data-name="paisWeb">
+              <button
+                class="unique-select-trigger font-inter text-white text-[12px] relative rounded-full h-[35px] min-w-[105px] max-w-[105px] w-full flex items-center gap-0 bg-transparent border border-white px-4 text-left focus:outline-none"
+                aria-haspopup="listbox" aria-expanded="false">
+                <span class="unique-select-display w-full flex items-center gap-1.5 font-semibold">
+                  PER <img src="img/peru.svg" alt="Perú" class="w-4 h-4 ">
+                </span>
+                <span class="flex items-center pointer-events-none w-fit">
+                  <img src="img/arrow.svg" class="w-max h-full rotate-90 object-cover" alt="">
+                </span>
+              </button>
+              <ul
+                class="unique-select-options absolute z-50 font-inter text-[16px] mt-2 min-w-[130px] max-w-[130px] w-full bg-white rounded-[12px] shadow-[0px_47px_13px_0px_rgba(94,_128,_158,_0.00),_0px_30px_12px_0px_rgba(94,_128,_158,_0.01),_0px_17px_10px_0px_rgba(94,_128,_158,_0.05),_0px_7px_7px_0px_rgba(94,_128,_158,_0.09),_0px_2px_4px_0px_rgba(94,_128,_158,_0.10)] hidden max-h-60 overflow-auto"
+                role="listbox"></ul>
+              <input type="hidden" name="paisWeb" value="PER"> <!-- Valor predeterminado -->
+            </div>
+
+          </div>
+          <button id="menuButton" class="relative group flex items-center gap-6">
+
+
+
+            <div class="w-8 h-8 flex items-center justify-center">
+              <!-- Ícono de hamburguesa -->
+              <svg id="iconHamburger" xmlns="http://www.w3.org/2000/svg" class="w-full" width="31" height="22"
+                viewBox="0 0 31 22" fill="none">
+                <line x1="0.75" y1="1.25" x2="30.25" y2="1.25" stroke="white" stroke-width="1.5"
+                  stroke-linecap="round" />
+                <line x1="0.75" y1="11.25" x2="30.25" y2="11.25" stroke="white" stroke-width="1.5"
+                  stroke-linecap="round" />
+                <line x1="0.75" y1="21.25" x2="30.25" y2="21.25" stroke="white" stroke-width="1.5"
+                  stroke-linecap="round" />
+              </svg>
+
+              <!-- Ícono de "X" -->
+              <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="hidden w-full h-full scale-110" width="31"
+                height="31" viewBox="0 0 42 43" fill="none">
+                <path d="M12.25 12.75L29.75 30.25M12.25 30.25L29.75 12.75" stroke="white" stroke-width="3.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+
+          </button>
+        </div>
+      </div>
+    </nav>
+
+
+  </header>
+
+  <!-- Modal - Menú Responsive -->
+  <div id="mobileMenu"
+    class="fixed inset-0 bg-[#1B58CD] text-white flex flex-col items-center justify-center gap-10 text-lg transform -translate-y-full transition-transform duration-500 z-30">
+    <ul class="flex flex-col items-center gap-10">
+      <li><a href="/nosotros.html">Nosotros</a></li>
+      <li><a href="/marcas.html">Marcas</a></li>
+      <li><a href="/responsabilidadSocial.html">Responsabilidad Social</a></li>
+      <li><a href="/noticias.html">Noticias</a></li>
+      <li><a href="/contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+  <main>
+    <section class="fondoProductoNaPancha pt-[80px]">
+      <div class="relative overflow-hidden">
+
+        <div class="relative h-[280px] sm:h-[450px] md:h-[500px]  lg:h-[550px] xl:h-[800px]" data-aos="fade-up"
+          data-aos-duration="1000" data-aos-once="true">
+          <div
+            class="absolute top-0 xl:-top-10 min-w-[150px] max-w-[200px] sm:max-w-[300px] md:max-w-[400px] -left-[calc(0%+8%)] lg:max-w-[500px] xl:max-w-[600px]  sm:-left-[calc(0%+6%)] md:-left-20 lg:-left-24 xl:-left-20 2xl:left-0">
+            <img src="img/ñapancha/Detergente-En-Polvo-NaPancha.png" class="object-cover w-full h-full " alt="">
+
+          </div>
+
+          <div
+            class=" absolute -top-[calc(0px+12%)] md:-top-[calc(0px+14%)]  lg:-top-[calc(0px+14%)] xl:-top-[25%] left-1/2 transform  translate-x-[-50%] min-w-[100px] max-w-[200px] sm:max-w-[300px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-[600px] -right-[30px]">
+            <img src="img/ñapancha/Suavizante-Sachet-NaPancha.png" class=" object-cover  w-full h-full " alt="">
+          </div>
+
+          <!-- <div
+            class="absolute -top-[12%] md:-top-[14%] lg:-top-[16%] xl:-top-[20%] 2xl:-top-[18%] min-w-[150px] max-w-[180px] sm:max-w-[220px] md:max-w-[320px] lg:max-w-[400px] xl:max-w-[600px]  -right-10 md:-right-[calc(0%+10%)] lg:-right-16 xl:-right-20 2xl:right-0">
+            <img src="img/ñapancha/Lavavajilla-En-Pasta-NaPancha.png" class=" object-cover w-full h-full   " alt="">
+
+          </div> -->
+          <div
+            class=" absolute  min-w-[150px]  max-w-[180px] sm:max-w-[250px] rotate-45  lg:max-w-[400px] xl:max-w-[500px]  -right-[16%] sm:-right-[6%] md:-right-[6%] lg:-right-[8%] xl:-right-[8%] 2xl:-right-[4%] bottom-0 lg:-bottom-20  md:max-w-[250px] ">
+            <img src="img/ñapancha/Multiusos-Lavanda-NaPancha.png" class="object-cover  w-full h-full " alt="">
+          </div>
+
+          <div
+            class="absolute min-w-[130px] max-w-[200px] sm:max-w-[300px]  lg:max-w-[400px] xl:max-w-[600px] -left-[14%] sm:-left-[6%] md:-left-[6%] lg:-left-[8%] xl:-left-[10%] 2xl:-left-[5%] bottom-0 lg:-bottom-20 md:max-w-[280px]">
+            <img src="img/ñapancha/Lavavajilla-Liquido-NaPancha.png" class=" object-cover   w-full h-full  " alt="">
+
+          </div>
+
+        </div>
+
+        <div class=" relative w-full  overflow-hidden mb-20 -mt-[35%] sm:-mt-[25%]">
+
+
+
+
+          <div class=" hidden adornosProducto absolute inset-0">
+
+          </div>
+          <div class=" max-w-[532px] mx-auto  px-6">
+            <h4 class="text-center text-[16px] md:text-[28px] text-[#272727] font-normal mb-[10px] md:mb-[16px]"
+              data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Suave
+              con una</h4>
+            <h2 class="titulo-h2 text-center mb-[40px] text-[30px] md:!text-[50px]" data-aos="fade-up"
+              data-aos-duration="1000" data-aos-once="true">Ña Pancha</h2>
+            <p class="text-center descripcion-v1 mb-[77px] max-md:max-w-full" data-aos="fade-up"
+              data-aos-duration="1000" data-aos-once="true">
+              Caricia sabe lo importante que es para ti el cuidado de los que más quieres. Por eso, te acompaña con una
+              línea completa de productos diseñados con componentes formulados y dermatológicamente probados, que
+              ayudarán a dejar tu ropa siempre limpia, suave y con exquisitos aromas.
+            </p>
+            <div>
+              <h3 class="text-[24px] font-bold text-center mb-[26px]" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-once="true">Valor que acaricia</h3>
+              <div class="flex items-center justify-center gap-4 md:gap-8" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-once="true">
+                <img src="img/producto/prendas.png" class="object-cover w-full h-full max-w-[100px] md:max-w-[120px]"
+                  alt="">
+                <img src="img/producto/perfume.png" class="object-cover w-full h-full max-w-[100px] md:max-w-[120px]"
+                  alt="">
+                <img src="img/producto/alergias.png" class="object-cover w-full h-full max-w-[100px] md:max-w-[120px]"
+                  alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="mb-20 relative md:max-w-[1200px] mx-auto px-6 " data-aos="fade-up" data-aos-duration="1000"
+        data-aos-once="true">
+        <div class="hidden lg:block ">
+          <div class=" custom-prev-product custom-swiper-button ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" viewBox="0 0 22 25" fill="none">
+              <path d="M7.36249 19.79L2.11249 12.44M2.11249 12.44L7.36249 5.09001M2.11249 12.44L20.4875 12.44"
+                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="swiper carouselProduct">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="md:max-w-[950px]  mx-auto flex items-center justify-center">
+                <div class="hidden lg:block max-w-[500px] w-full h-full">
+                  <img src="img/home/productoÑapanchaHome.png" class="object-cover w-full h-full" alt="">
+                </div>
+                <div class="lg:max-w-[434px] text-center lg:text-start">
+                  <p class="text-center lg:text-start text-[16px] md:text-[28px] text-[#272727] font-normal mb-1">
+                    Productos</p>
+                  <h2
+                    class="titulo-h2 text-center lg:text-start mb-[24px] !text-[30px] md:!text-[50px] mx-auto lg:mx-0 max-md:!leading-none md:max-w-[424px]">
+                    <span class="block mb-1.5">Detergente
+                    </span> en polvo
+                  </h2>
+                  <p
+                    class=" descripcion-v1 mb-[35px] text-center lg:text-start w-full max-w-full md:max-w-[500px] mx-auto">
+                    Diseñado para brindar un cuidado excepcional a las fibras y colores de tus prendas más queridas con
+                    una
+                    fragancia exclusiva. Además, dermatológicamente probado, evitando causar irritaciones en la piel.
+                  </p>
+                  <div class="flex flex-col md:flex-row items-center w-full  justify-center ">
+                    <div class="block lg:hidden max-w-[300px] w-full h-full">
+                      <img src="img/home/productoÑapanchaHome.png" class="object-cover w-full h-full" alt="">
+                    </div>
+                    <div
+                      class="border border-dashed flex-1 max-w-full md:max-w-[450px] border-black rounded-[20px] py-[17px] px-[15px] md:px-[25px] space-y-[6px]">
+                      <h4 class=" text-start max-md:text-[14px]">Variedades</h4>
+                      <h2 class="font-bold text-start max-md:text-[14px]">Rosado</h2>
+                      <h4 class=" text-start max-md:text-[14px]">Presentaciones</h4>
+                      <div class="font-bold flex space-x-2 md:space-x-4 max-md:text-[14px]">
+                        <span>100gr</span>
+                        <span>|</span>
+                        <span>330gr</span>
+                        <span>|</span>
+                        <span>700gr</span>
+                        <span>|</span>
+                        <span>1.4kg</span>
+                        <span>|</span>
+                        <span>2.1kg</span>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="md:max-w-[950px]  mx-auto flex items-center justify-center">
+                <div class="hidden lg:block max-w-[500px] w-full h-full">
+                  <img src="img/home/productoÑapanchaHome.png" class="object-cover w-full h-full" alt="">
+                </div>
+                <div class="lg:max-w-[434px] text-center lg:text-start">
+                  <p class="text-center lg:text-start text-[16px] md:text-[28px] text-[#272727] font-normal mb-1">
+                    Productos</p>
+                  <h2
+                    class="titulo-h2 text-center lg:text-start mb-[24px] !text-[30px] md:!text-[50px] mx-auto lg:mx-0 max-md:!leading-none md:max-w-[424px]">
+                    <span class="block mb-1.5">Detergente
+                    </span> en polvo
+                  </h2>
+                  <p
+                    class=" descripcion-v1 mb-[35px] text-center lg:text-start w-full max-w-full md:max-w-[500px] mx-auto">
+                    Diseñado para brindar un cuidado excepcional a las fibras y colores de tus prendas más queridas con
+                    una
+                    fragancia exclusiva. Además, dermatológicamente probado, evitando causar irritaciones en la piel.
+                  </p>
+                  <div class="flex flex-col md:flex-row items-center w-full  justify-center ">
+                    <div class="block lg:hidden max-w-[300px] w-full h-full">
+                      <img src="img/home/productoÑapanchaHome.png" class="object-cover w-full h-full" alt="">
+                    </div>
+                    <div
+                      class="border border-dashed flex-1 max-w-full md:max-w-[450px] border-black rounded-[20px] py-[17px] px-[15px] md:px-[25px] space-y-[6px]">
+                      <h4 class=" text-start max-md:text-[14px]">Variedades</h4>
+                      <h2 class="font-bold text-start max-md:text-[14px]">Rosado</h2>
+                      <h4 class=" text-start max-md:text-[14px]">Presentaciones</h4>
+                      <div class="font-bold flex space-x-2 md:space-x-4 max-md:text-[14px]">
+                        <span>100gr</span>
+                        <span>|</span>
+                        <span>330gr</span>
+                        <span>|</span>
+                        <span>700gr</span>
+                        <span>|</span>
+                        <span>1.4kg</span>
+                        <span>|</span>
+                        <span>2.1kg</span>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="md:max-w-[950px]  mx-auto flex items-center justify-center">
+                <div class="hidden lg:block max-w-[500px] w-full h-full">
+                  <img src="img/home/productoÑapanchaHome.png" class="object-cover w-full h-full" alt="">
+                </div>
+                <div class="lg:max-w-[434px] text-center lg:text-start">
+                  <p class="text-center lg:text-start text-[16px] md:text-[28px] text-[#272727] font-normal mb-1">
+                    Productos</p>
+                  <h2
+                    class="titulo-h2 text-center lg:text-start mb-[24px] !text-[30px] md:!text-[50px] mx-auto lg:mx-0 max-md:!leading-none md:max-w-[424px]">
+                    <span class="block mb-1.5">Detergente
+                    </span> en polvo
+                  </h2>
+                  <p
+                    class=" descripcion-v1 mb-[35px] text-center lg:text-start w-full max-w-full md:max-w-[500px] mx-auto">
+                    Diseñado para brindar un cuidado excepcional a las fibras y colores de tus prendas más queridas con
+                    una
+                    fragancia exclusiva. Además, dermatológicamente probado, evitando causar irritaciones en la piel.
+                  </p>
+                  <div class="flex flex-col md:flex-row items-center w-full  justify-center ">
+                    <div class="block lg:hidden max-w-[300px] w-full h-full">
+                      <img src="img/home/productoÑapanchaHome.png" class="object-cover w-full h-full" alt="">
+                    </div>
+                    <div
+                      class="border border-dashed flex-1 max-w-full md:max-w-[450px] border-black rounded-[20px] py-[17px] px-[15px] md:px-[25px] space-y-[6px]">
+                      <h4 class=" text-start max-md:text-[14px]">Variedades</h4>
+                      <h2 class="font-bold text-start max-md:text-[14px]">Rosado</h2>
+                      <h4 class=" text-start max-md:text-[14px]">Presentaciones</h4>
+                      <div class="font-bold flex space-x-2 md:space-x-4 max-md:text-[14px]">
+                        <span>100gr</span>
+                        <span>|</span>
+                        <span>330gr</span>
+                        <span>|</span>
+                        <span>700gr</span>
+                        <span>|</span>
+                        <span>1.4kg</span>
+                        <span>|</span>
+                        <span>2.1kg</span>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="hidden lg:block">
+          <div class="custom-next-product custom-swiper-button ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" viewBox="0 0 22 25" fill="none">
+              <path d="M14.6375 5.20999L19.8875 12.56M19.8875 12.56L14.6375 19.91M19.8875 12.56L1.51251 12.56"
+                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+
+      </div>
+      <div class="max-lg:px-6" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+        <div
+          class="py-6 md:py-10 border border-dashed border-black rounded-[20px] relative max-w-[500px] md:max-w-[750px] lg:max-w-[1000px] md:mx-auto md:h-[237px] flex items-center justify-center mx-auto ">
+          <div class="flex items-center justify-center gap-[10px] md:gap-[40px] lg::gap-[92px]">
+            <img src="img/producto/metro.png"
+              class="object-cover max-sm:max-w-[50px] sm:max-w-[60px] md:max-w-full w-full h-full" alt="">
+            <img src="img/producto/wong.png"
+              class="object-cover max-sm:max-w-[50px] sm:max-w-[60px] md:max-w-full w-full h-full" alt="">
+            <img src="img/producto/plazaVea.png"
+              class="object-cover max-sm:max-w-[50px] sm:max-w-[60px] md:max-w-full w-full h-full" alt="">
+            <img src="img/producto/mass.png"
+              class="object-cover max-sm:max-w-[50px] sm:max-w-[60px] md:max-w-full w-full h-full" alt="">
+            <img src="img/producto/vega.png"
+              class="object-cover max-sm:max-w-[50px] sm:max-w-[60px] md:max-w-full w-full h-full" alt="">
+
+          </div>
+
+          <span
+            class="absolute left-1/2 -top-3 bg-[#C6F5FD] px-2 transform text-[14px] sm:text-[16px] -translate-x-[50%] font-bold">Encuéntranos
+            en:</span>
+
+
+        </div>
+      </div>
+      <div
+        class="max-w-[1100px] mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 pt-20 pb-20"
+        data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+        <img src="img/producto/cel.png" class="object-cover max-md:max-w-[250px]" alt="">
+        <div class="flex flex-col items-center justify-center md:items-start md:justify-start gap-4">
+          <p>
+            <strong class=" block text-center md:text-start">Síguenos</strong> y
+            mantente informado:
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="220" height="60" viewBox="0 0 220 60" fill="none">
+            <circle cx="190" cy="30" r="30" fill="#1B58CD" />
+            <path
+              d="M197.01 25.6639C198.766 26.771 200.916 27.4225 203.239 27.4225V23.4791C202.799 23.4792 202.361 23.4387 201.931 23.3583V26.4623C199.608 26.4623 197.458 25.811 195.702 24.7039V32.7512C195.702 36.777 192.003 40.0402 187.441 40.0402C185.739 40.0402 184.156 39.5861 182.842 38.8073C184.342 40.1608 186.434 41.0003 188.749 41.0003C193.311 41.0003 197.01 37.7371 197.01 33.7111V25.6639H197.01ZM198.624 21.6855C197.727 20.8207 197.138 19.7032 197.01 18.4676V17.9604H195.771C196.083 19.5307 197.147 20.8723 198.624 21.6855H198.624ZM185.728 35.7182C185.226 35.1384 184.955 34.429 184.957 33.6996C184.957 31.8584 186.648 30.3655 188.736 30.3655C189.125 30.3654 189.511 30.4181 189.882 30.5218V26.4902C189.449 26.4378 189.012 26.4155 188.575 26.4237V29.5617C188.204 29.4579 187.817 29.4052 187.428 29.4055C185.34 29.4055 183.649 30.8983 183.649 32.7397C183.649 34.0418 184.494 35.169 185.728 35.7182Z"
+              fill="#FF004F" />
+            <path
+              d="M195.701 24.7038C197.457 25.8109 199.607 26.4622 201.93 26.4622V23.3582C200.633 23.1146 199.486 22.5169 198.623 21.6855C197.146 20.8722 196.082 19.5307 195.77 17.9604H192.514V33.711C192.506 35.5472 190.817 37.0339 188.735 37.0339C187.507 37.0339 186.417 36.5178 185.726 35.7181C184.493 35.169 183.648 34.0417 183.648 32.7398C183.648 30.8985 185.339 29.4056 187.427 29.4056C187.826 29.4056 188.212 29.4605 188.573 29.5618V26.4238C184.091 26.5055 180.486 29.7369 180.486 33.7111C180.486 35.695 181.384 37.4934 182.841 38.8075C184.155 39.5861 185.738 40.0404 187.44 40.0404C192.003 40.0404 195.701 36.7769 195.701 32.7512V24.7039H195.701V24.7038Z"
+              fill="white" />
+            <path
+              d="M201.929 23.3577V22.5186C200.76 22.5201 199.614 22.2313 198.622 21.685C199.5 22.5331 200.656 23.1179 201.929 23.3579V23.3577ZM195.769 17.9599C195.739 17.8099 195.716 17.6588 195.7 17.5072V17H191.205V32.7507C191.198 34.5867 189.509 36.0735 187.426 36.0735C186.835 36.0743 186.253 35.9524 185.726 35.7178C186.416 36.5174 187.507 37.0334 188.734 37.0334C190.817 37.0334 192.506 35.5468 192.513 33.7106V17.96H195.769V17.9599ZM188.573 26.4233V25.5298C188.197 25.4845 187.819 25.4618 187.439 25.462C182.877 25.462 179.178 28.7254 179.178 32.7507C179.178 35.2745 180.631 37.4986 182.84 38.8069C181.383 37.4929 180.486 35.6943 180.486 33.7105C180.486 29.7365 184.091 26.5051 188.573 26.4234V26.4233Z"
+              fill="#00F2EA" />
+            <circle cx="30" cy="30" r="30" fill="#1B58CD" />
+            <path
+              d="M35.906 17C35.906 18.3733 35.906 19.6812 35.9713 21.0545C35.6448 21.0545 35.3183 21.0545 35.0571 21.0545C34.4693 21.0545 33.9469 21.0545 33.3591 21.0545C32.7061 21.0545 32.3142 21.3815 32.3142 22.0354C32.3142 22.951 32.3142 23.8011 32.3142 24.7166C33.555 24.7166 34.7958 24.7166 36.102 24.7166C35.9713 26.1553 35.8407 27.5286 35.7101 28.9673C34.5999 28.9673 33.4897 28.9673 32.3795 28.9673C32.4448 32.9564 32.4448 36.9455 32.5101 40.9346C30.8775 40.9346 29.1796 40.9346 27.5469 41C27.4816 37.0109 27.4816 33.0872 27.4163 29.0981C26.6326 29.0981 25.849 29.0981 25.0653 29.0981C25.0653 27.6594 25.0653 26.2861 25 24.8474C25.7837 24.8474 26.5673 24.8474 27.351 24.8474C27.351 24.7166 27.351 24.5858 27.351 24.5204C27.351 23.5395 27.2857 22.5586 27.351 21.5777C27.4816 20.0082 28.0694 18.6349 29.5061 17.7847C30.2244 17.327 31.0734 17.1308 31.9224 17.1308C33.2285 17.0654 34.5346 17.1308 35.8407 17.0654C35.8407 17 35.8407 17 35.906 17Z"
+              fill="white" />
+            <circle cx="110" cy="30" r="30" fill="#1B58CD" />
+            <path
+              d="M106.927 28.4426C106.927 26.2599 108.707 24.4793 110.89 24.4793C113.072 24.4793 114.853 26.2599 114.853 28.4426C114.853 30.6252 113.072 32.4058 110.89 32.4058C108.707 32.4058 106.927 30.6827 106.927 28.4426ZM104.801 28.4426C104.801 31.8315 107.558 34.5885 110.947 34.5885C114.336 34.5885 117.093 31.8315 117.093 28.4426C117.093 25.0537 114.336 22.2966 110.947 22.2966C107.558 22.2966 104.801 25.1111 104.801 28.4426ZM115.83 22.1243C115.83 22.9284 116.461 23.5603 117.266 23.5603C118.07 23.5603 118.701 22.9284 118.701 22.1243C118.701 21.3202 118.07 20.6883 117.266 20.6883C116.461 20.6883 115.83 21.3202 115.83 22.1243ZM106.065 38.1497C104.916 38.0923 104.284 37.92 103.825 37.7476C103.25 37.5179 102.848 37.2881 102.446 36.8286C102.044 36.4266 101.757 36.0245 101.527 35.4501C101.355 35.048 101.183 34.4162 101.125 33.21C101.068 31.9463 101.068 31.6017 101.068 28.3851C101.068 25.1686 101.068 24.8239 101.125 23.5603C101.183 22.4115 101.355 21.7797 101.527 21.3202C101.757 20.7458 101.987 20.3437 102.446 19.9416C102.848 19.5396 103.25 19.2524 103.825 19.0226C104.227 18.8503 104.859 18.678 106.065 18.6205C107.329 18.5631 107.673 18.5631 110.89 18.5631C114.049 18.5631 114.451 18.5631 115.715 18.6205C116.863 18.678 117.495 18.8503 117.955 19.0226C118.529 19.2524 118.931 19.4821 119.333 19.9416C119.735 20.3437 120.023 20.7458 120.252 21.3202C120.425 21.7222 120.597 22.3541 120.654 23.5603C120.712 24.8239 120.712 25.1686 120.712 28.3851C120.712 31.5443 120.712 31.9463 120.654 33.21C120.597 34.3588 120.425 34.9906 120.252 35.4501C120.023 36.0245 119.793 36.4266 119.333 36.8286C118.931 37.2307 118.529 37.5179 117.955 37.7476C117.553 37.92 116.921 38.0923 115.715 38.1497C114.451 38.2072 114.106 38.2072 110.89 38.2072C107.731 38.2646 107.329 38.2072 106.065 38.1497ZM106.008 16.6102C104.744 16.6676 103.882 16.8974 103.136 17.1846C102.331 17.4718 101.7 17.8738 101.01 18.5631C100.321 19.2524 99.919 19.8842 99.6318 20.6883C99.3446 21.435 99.1149 22.2966 99.0574 23.5603C99 24.8239 99 25.226 99 28.5C99 31.774 99 32.1186 99.0574 33.4397C99.1149 34.7034 99.3446 35.565 99.6318 36.3117C99.919 37.1158 100.321 37.7476 101.01 38.4369C101.7 39.1262 102.331 39.5282 103.136 39.8154C103.882 40.1026 104.744 40.3324 106.008 40.3898C107.271 40.4473 107.673 40.4473 110.947 40.4473C114.164 40.4473 114.566 40.4473 115.887 40.3898C117.151 40.3324 118.012 40.1026 118.759 39.8154C119.563 39.5282 120.195 39.1262 120.884 38.4369C121.573 37.7476 121.976 37.1158 122.263 36.3117C122.55 35.565 122.78 34.7034 122.837 33.4397C122.895 32.1761 122.895 31.774 122.895 28.5C122.895 25.226 122.895 24.8814 122.837 23.5603C122.78 22.2966 122.55 21.435 122.263 20.6883C121.976 19.8842 121.573 19.2524 120.884 18.5631C120.195 17.8738 119.563 17.4718 118.759 17.1846C118.012 16.8974 117.151 16.6676 115.887 16.6102C114.623 16.5527 114.221 16.5527 110.947 16.5527C107.673 16.5527 107.271 16.5527 106.008 16.6102Z"
+              fill="white" />
+          </svg>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white py-[90px]" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+      <div class="container max-w-[1256px]">
+        <div class="flex flex-col lg:flex-row items-center max-w-[1000px] mx-auto w-full">
+          <h2
+            class="titulo-h2 lg:max-w-[300px] max-lg:mb-10 text-center lg:text-start max-md:text-[30px] max-lg:!leading-none">
+            Conoce nuestras otras marcas</h2>
+          <div class="flex items-end gap-[30px] ">
+            <div class="max-w-[300px] h-[200px] md:h-[300px] w-full">
+              <img src="img/noticias/productoCariciaNoticias.png" class="object-cover w-full h-full" alt="">
+            </div>
+
+            <div class="max-w-[350px] h-[100px] md:h-[200px] w-full">
+              <img src="img/noticias/productoMonclearNoticias.png" class="object-cover w-full h-full" alt="">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+  </main>
+  <footer class="bg-footer" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+    <div class="max-w-[1440px] mx-auto pt-[60px] pb-[30px] flex flex-col gap-[0px] lg:gap-[30px] px-6">
+      <div class="logo max-lg:mb-[40px]">
+        <img src="img/logoBlanco.svg" class="object-cover" alt="logo" />
+      </div>
+
+      <div class="flex lg:flex-row flex-col items-center gap-[50px] xl:gap-[80px] 2xl:gap-[100px] w-full">
+        <div class="flex flex-col gap-6  text-[#ffffff] w-full lg:max-w-[420px]">
+          <div class="flex items-start gap-4 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 14 18" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.98466 17.1418L7.61405 16.4326C8.32822 15.6147 8.97057 14.8387 9.54211 14.1006L10.0139 13.4782C11.9839 10.824 12.9693 8.71741 12.9693 7.1604C12.9693 3.83692 10.2902 1.14282 6.98466 1.14282C3.67913 1.14282 1 3.83692 1 7.1604C1 8.71741 1.98547 10.824 3.95543 13.4782L4.42722 14.1006C5.24257 15.1453 6.09561 16.1591 6.98466 17.1418Z"
+                stroke="#1AA9E3" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M6.98464 9.62101C8.36182 9.62101 9.47825 8.50458 9.47825 7.1274C9.47825 5.75022 8.36182 4.63379 6.98464 4.63379C5.60746 4.63379 4.49103 5.75022 4.49103 7.1274C4.49103 8.50458 5.60746 9.62101 6.98464 9.62101Z"
+                fill="#1AA9E3" />
+            </svg>
+            <p class="text-[14px] font-[300px] w-full">
+              Av. Primavera 517 – Of. 404 <br />Urb. Chacarilla del Estanque -
+              San Borja, Lima - Perú
+            </p>
+          </div>
+          <div class="flex items-start gap-4 ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13" fill="none">
+              <path
+                d="M1.43556 12.4444C1.02667 12.4444 0.685333 12.3076 0.411556 12.0338C0.137185 11.7594 0 11.4178 0 11.0089V1.43556C0 1.02667 0.137185 0.685333 0.411556 0.411555C0.685333 0.137185 1.02667 0 1.43556 0H14.5644C14.9733 0 15.3147 0.137185 15.5884 0.411555C15.8628 0.685333 16 1.02667 16 1.43556V11.0089C16 11.4178 15.8631 11.7591 15.5893 12.0329C15.315 12.3073 14.9733 12.4444 14.5644 12.4444H1.43556ZM8 6.32444L0.888889 1.67556V11.0089C0.888889 11.1683 0.940148 11.2993 1.04267 11.4018C1.14519 11.5043 1.27615 11.5556 1.43556 11.5556H14.5644C14.7239 11.5556 14.8548 11.5043 14.9573 11.4018C15.0599 11.2993 15.1111 11.1683 15.1111 11.0089V1.67556L8 6.32444ZM8 5.33333L14.8373 0.888889H1.16267L8 5.33333ZM0.888889 1.67556V0.888889V11.0089C0.888889 11.1683 0.940148 11.2993 1.04267 11.4018C1.14519 11.5043 1.27615 11.5556 1.43556 11.5556H0.888889V1.67556Z"
+                fill="#1AA9E3" />
+            </svg>
+            <p class="leading-none text-[14px] font-[300px]">cuentanos@grupo-cala.com</p>
+          </div>
+          <div class="flex items-start gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M15.3986 11.1774L11.4635 9.41658C11.311 9.35056 11.1444 9.32361 10.9788 9.33816C10.8132 9.35271 10.6538 9.40831 10.5152 9.49992C10.5041 9.50695 10.4935 9.51474 10.4835 9.52325L8.41679 11.2849C8.3708 11.313 8.3186 11.3293 8.26481 11.3323C8.21103 11.3354 8.15732 11.3251 8.10845 11.3024C6.7551 10.6491 5.35425 9.25908 4.70091 7.92157C4.6778 7.87306 4.66707 7.81959 4.66969 7.76593C4.6723 7.71226 4.68818 7.66009 4.71591 7.61406L6.4826 5.51321C6.49093 5.50321 6.49843 5.49237 6.50593 5.48154C6.59726 5.34304 6.65269 5.18399 6.66724 5.01873C6.68179 4.85347 6.65499 4.68719 6.58927 4.53486L4.82508 0.606484C4.73991 0.40752 4.59249 0.241557 4.40496 0.133517C4.21743 0.0254765 3.99991 -0.018809 3.78506 0.00731057C2.73635 0.145579 1.77384 0.66087 1.0773 1.45694C0.380755 2.25301 -0.00218332 3.27542 9.36447e-06 4.33319C9.36447e-06 10.7666 5.23341 16 11.6668 16C12.7246 16.0022 13.747 15.6192 14.5431 14.9227C15.3392 14.2262 15.8545 13.2637 15.9927 12.2149C16.0187 12.0011 15.9748 11.7846 15.8678 11.5976C15.7607 11.4107 15.5961 11.2633 15.3986 11.1774ZM15.3336 12.1316C15.2159 13.0197 14.7788 13.8346 14.1039 14.4239C13.4291 15.0131 12.5627 15.3364 11.6668 15.3333C5.60175 15.3333 0.666685 10.3983 0.666685 4.33319C0.663582 3.4373 0.98688 2.57095 1.57614 1.89612C2.16539 1.22128 2.98026 0.784163 3.8684 0.666485C3.88172 0.665657 3.89508 0.665657 3.9084 0.666485C3.97416 0.667045 4.03828 0.687046 4.09271 0.723969C4.14713 0.760892 4.18941 0.813088 4.21423 0.873987L5.97342 4.80236C5.99395 4.85038 6.00291 4.90254 5.99958 4.95465C5.99625 5.00676 5.98073 5.05736 5.95426 5.10237L4.1884 7.20239C4.18007 7.21323 4.17173 7.22323 4.16423 7.23489C4.07016 7.37876 4.01475 7.54444 4.00336 7.71596C3.99198 7.88748 4.025 8.05903 4.09923 8.21407C4.82341 9.69659 6.31676 11.1791 7.81595 11.9033C7.97205 11.977 8.14458 12.0091 8.31676 11.9964C8.48893 11.9837 8.65488 11.9266 8.79846 11.8308L8.8293 11.8074L10.8985 10.0474C10.9428 10.0204 10.9928 10.0042 11.0445 10.0003C11.0963 9.99642 11.1482 10.0048 11.196 10.0249L15.1302 11.7883C15.1966 11.8159 15.2523 11.8643 15.2889 11.9262C15.3256 11.988 15.3412 12.0601 15.3336 12.1316Z"
+                fill="#1AA9E3" />
+            </svg>
+            <p class="number leading-none text-[14px] font-[300px]">960 263 560</p>
+          </div>
+        </div>
+        <div class="footer-line hidden lg:block"></div>
+        <div class="block md:hidden w-full">
+          <div class="accordion w-full">
+            <div class="accordion-item">
+              <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Mapa de
+                  Sitio</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <div class="flex flex-col gap-4 w-full">
+                  <a href="" class="text-[14px] font-[300px]">Inicio</a>
+                  <a href="" class="text-[14px] font-[300px]">Nuestras marcas</a>
+                  <a href="" class="text-[14px] font-[300px]">Nuestra historia</a>
+                  <a href="" class="text-[14px] font-[300px]">Responsabilidad social</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Cómo
+                  encontrarnos</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <div class="flex flex-col gap-4  w-full">
+                  <a href="" class="text-[14px] font-[300px]">Noticias</a>
+                  <a href="" class="text-[14px] font-[300px]">Contacto</a>
+                  <a href="" class="text-[14px] font-[300px]">Preguntas frecuentes</a>
+                  <a href="" class="text-[14px] font-[300px]">Libro de reclamaciones</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Información
+                  Legal</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <div class="flex flex-col gap-4  w-full">
+                  <a href="" class="text-[14px] font-[300px]">Línea de trasparencia</a>
+                  <a href="" class="text-[14px] font-[300px]">Aviso de Privacidad</a>
+                  <a href="" class="text-[14px] font-[300px]">Preguntas frecuentes</a>
+                  <a href="" class="text-[14px] font-[300px]">PQR</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div
+          class="hidden md:flex items-center gap-[40px] 2xl:gap-[100px]  text-[#FBFBFB] w-full  justify-start border-t lg:border-t-0 border-[#1AA9E3]/20 pt-8">
+          <div class="flex flex-col gap-4 w-full">
+            <a href="" class="text-[14px] font-[300px]">Inicio</a>
+            <a href="" class="text-[14px] font-[300px]">Nuestras marcas</a>
+            <a href="" class="text-[14px] font-[300px]">Nuestra historia</a>
+            <a href="" class="text-[14px] font-[300px]">Responsabilidad social</a>
+          </div>
+          <div class="flex flex-col gap-4  w-full">
+            <a href="" class="text-[14px] font-[300px]">Noticias</a>
+            <a href="" class="text-[14px] font-[300px]">Contacto</a>
+            <a href="" class="text-[14px] font-[300px]">Preguntas frecuentes</a>
+            <a href="" class="text-[14px] font-[300px]">Libro de reclamaciones</a>
+          </div>
+          <div class="flex flex-col gap-4  w-full">
+            <a href="" class="text-[14px] font-[300px]">Línea de trasparencia</a>
+            <a href="" class="text-[14px] font-[300px]">Aviso de Privacidad</a>
+            <a href="" class="text-[14px] font-[300px]">Preguntas frecuentes</a>
+            <a href="" class="text-[14px] font-[300px]">PQR</a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col max-md:gap-2 md:flex-row items-center justify-between text-[#ffffff] border-t border-[#1AA9E3]/20 pt-8 mt-10">
+        <div>
+          <p class="text-[11px]"> <strong>Grupo CALA</strong><span> - ©2024 Todos lo derechos reservados.</span></p>
+        </div>
+        <div class="flex items-center gap-2 text-[11px]">
+          <p>Made with 🧠</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="67" height="15" viewBox="0 0 67 15" fill="none">
+            <path
+              d="M10.3483 7.3852H10.2427L7.05726 0.349051C6.96927 0.128597 6.75808 0 6.52929 0H0.58077C0.263985 0 0 0.275568 0 0.606248V13.8151C0 14.1458 0.263985 14.4213 0.58077 14.4213H4.85737C5.17415 14.4213 5.43815 14.1458 5.43815 13.8151V6.98103H5.54374L8.95798 14.0907C9.06358 14.2928 9.25716 14.4213 9.46835 14.4213H15.2057C15.5225 14.4213 15.7865 14.1458 15.7865 13.8151V0.606248C15.7865 0.275568 15.5225 0 15.2057 0H10.9291C10.6123 0 10.3483 0.275568 10.3483 0.606248V7.3852Z"
+              fill="white" fill-opacity="0.4" />
+            <path
+              d="M23.4592 8.10161H31.0972C31.2908 8.10161 31.4316 7.93627 31.4316 7.75256V6.68703C31.4316 6.48495 31.2732 6.33798 31.0972 6.33798H23.4592V4.29878H31.4492C31.766 4.29878 32.03 4.02322 32.03 3.69254V0.624556C32.03 0.293875 31.766 0.0183105 31.4492 0.0183105H18.1442C17.8275 0.0183105 17.5635 0.293875 17.5635 0.624556V13.8518C17.5635 14.1825 17.8275 14.4397 18.1266 14.4397H31.5196C31.8364 14.4397 32.1004 14.1641 32.1004 13.8334V10.9491C32.1004 10.6185 31.8364 10.3429 31.5196 10.3429H23.4416V8.10161H23.4592Z"
+              fill="white" fill-opacity="0.4" />
+            <path
+              d="M49.7005 5.71343C49.7005 0.698105 46.9551 0 43.312 0H34.4948C34.1781 0 33.9141 0.275568 33.9141 0.606248V13.8151C33.9141 14.1458 34.1781 14.4213 34.4948 14.4213H39.229C39.5458 14.4213 39.8098 14.1458 39.8098 13.8151V11.2615H40.813C41.1297 12.8414 42.3441 14.0723 43.8928 14.3479C44.0688 14.3846 44.2624 14.4213 44.4736 14.4213H49.1373C49.4541 14.4213 49.7181 14.1458 49.7181 13.8151V11.2615C49.7181 10.9308 49.4541 10.6553 49.1373 10.6553H47.2366C48.8206 9.97553 49.7005 8.56095 49.7005 5.71343ZM39.7922 4.24374H42.4497C43.1008 4.24374 43.6464 4.7765 43.6992 5.45623C43.8224 7.03615 43.3472 7.56891 42.0449 7.60565H39.7922V4.24374Z"
+              fill="white" fill-opacity="0.4" />
+            <path
+              d="M67 7.128C67 1.89223 64.5713 0 59.8723 0H52.0759C51.7591 0 51.4951 0.275568 51.4951 0.606248V13.7416C51.4951 14.1274 51.7943 14.4213 52.1463 14.4213H59.8723C64.5889 14.4213 67 12.5291 67 7.29334C67 7.2566 67 7.23823 67 7.21986C67 7.18312 67 7.16475 67 7.128ZM58.8692 9.9939H57.2852V8.37724V4.42745H58.8692C60.6291 4.42745 61.0867 5.43786 61.1043 7.20149C61.0867 9.00186 60.6291 9.9939 58.8692 9.9939Z"
+              fill="white" fill-opacity="0.4" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

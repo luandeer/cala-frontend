@@ -1,0 +1,792 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.fondoProductoNaPancha {
+	background: linear-gradient(
+		89deg,
+		#5dc4f5 2.94%,
+		#afecfd 23.46%,
+		#c6f5fd 36.82%,
+		#c9f5fe 62.78%,
+		#b8f0fd 75.22%,
+		#5dc3f4 98.29%
+	);
+}
+
+.fondoProductoMonclear {
+	background: linear-gradient(
+		91deg,
+		#aae2f9 2.84%,
+		#c5eafd 19.4%,
+		#d3eeff 37.75%,
+		#d3eeff 54.98%,
+		#cfecfe 70.21%,
+		#b8e7fb 85.91%,
+		#a7e1f7 95.19%
+	);
+}
+
+.fondoProducto {
+	background: linear-gradient(
+		89deg,
+		rgba(255, 157, 191, 0.5) 0.68%,
+		/* 0.5 es el nivel de opacidad */ rgba(255, 217, 231, 0.5) 22.76%,
+		rgba(255, 235, 243, 0.5) 48.63%,
+		rgba(255, 221, 233, 0.5) 74.76%,
+		rgba(255, 157, 191, 0.5) 98.8%
+	);
+}
+.fondoProductoTras {
+	background: linear-gradient(
+		91deg,
+		#fff299 2.84%,
+		#fef7c1 19.4%,
+		#fef9d1 37.75%,
+		#fef9d1 50.17%,
+		#fef9d1 65.55%,
+		#fff7be 80.74%,
+		#fff299 95.19%
+	);
+}
+
+.fondoProductoSupremo {
+	background: linear-gradient(
+		91deg,
+		#b5f4ad 2.84%,
+		#dcfccd 19.4%,
+		#ebffda 37.75%,
+		#ebffda 50.17%,
+		#ebffda 65.55%,
+		#d7fbcb 80.74%,
+		#b5f4ad 95.19%
+	);
+}
+/* 
+menu responsive */
+.no-scroll {
+	position: fixed;
+	width: 100%;
+	overflow-y: scroll;
+}
+
+/* fin de menu responsive */
+
+.bannerHome {
+	background: url('../img/home/bannerHome.png');
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;
+}
+.bannerIndex {
+	background: url('../img/bg-0.jpg');
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	width: 100%;
+}
+.adornosProducto {
+	background: url('../img/producto/adorno.png');
+	background-size: cover;
+	background-position: top 20% right 50%;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+.fondoMapa {
+	background: url('../img/nosotros/mapa.png');
+	background-size: 100% 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	max-width: 900px;
+	margin-left: auto;
+	width: 100%;
+	height: 100%;
+}
+
+.bannerNosotros {
+	background: url('../img/nosotros/banner.png');
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	max-width: calc(100% - 190px);
+	width: 100%;
+	height: 480px;
+}
+.bannerMarcas {
+	background: url('../img/marcas/bannerMarcas.png');
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	max-width: calc(100% - 190px);
+	width: 100%;
+	height: 520px;
+}
+.bannerContacto {
+	background: url('../img/contacto/bannerContactos.png');
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	max-width: calc(100% - 190px);
+	width: 100%;
+	height: 480px;
+}
+.bannerResponsabilidad {
+	background: url('../img/responsabilidad/bannerResponsabilidad.png');
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	max-width: calc(100% - 190px);
+	width: 100%;
+	height: 480px;
+}
+
+.bannerLegal {
+	background: url('../img/legal/bannerLegal.png');
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	max-width: calc(100% - 190px);
+	width: 100%;
+	height: 480px;
+}
+
+.degradadoBannerNosotros {
+	background: #f9973c;
+	opacity: 0.15;
+	mix-blend-mode: overlay;
+}
+.degradadoBannerHome {
+	background: #000;
+	opacity: 0.2;
+}
+.degradadoBannerIndex {
+	background: #000;
+	opacity: 0.5;
+}
+
+.subtitulo {
+	color: #272727;
+	font-size: 70px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 70px;
+	letter-spacing: -3px;
+}
+.titulo-h2 {
+	color: #272727;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 45px; /* 112.5% */
+	letter-spacing: -2px;
+}
+
+.titulo-h3 {
+	color: #000;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	text-align: start;
+	line-height: 25px;
+}
+.descripcion-v1 {
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+}
+.descripcion-v2 {
+	color: #000;
+	text-align: center;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 18px;
+	opacity: 0.5;
+}
+
+.buttonCala {
+	display: flex;
+	white-space: nowrap;
+	height: 50px;
+	padding: 9px 28px;
+	align-items: center;
+	justify-items: center;
+	color: white;
+	border-radius: 40px;
+	border: 1px solid #1b58cd;
+	background: #1b58cd;
+}
+
+/*Desactivar efecto border*/
+button:active {
+	outline: none !important; /* Elimina el borde del foco */
+}
+
+/*checkbox*/
+
+.checkbox-wrapper-65 .cbx {
+	position: relative;
+	display: block;
+	float: left;
+	width: 20px;
+	height: 20px;
+	min-width: 20px;
+	border-radius: 4px;
+	border: 1px solid #c2c2c2;
+	background-color: transparent;
+	/* background-image: linear-gradient(#0f698d, #1d3c6b); */
+	box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15),
+		inset 0 -1px 1px rgba(0, 0, 0, 0.15);
+	transition: all 0.15s ease;
+}
+
+.checkbox-wrapper-65 .cbx svg {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	fill: none;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke: #fff;
+	stroke-width: 2;
+	stroke-dasharray: 17;
+	stroke-dashoffset: 17;
+	transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-65 .cbx + span {
+	float: left;
+	margin-left: 6px;
+}
+
+.checkbox-wrapper-65 {
+	user-select: none;
+}
+
+.checkbox-wrapper-65 label {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.checkbox-wrapper-65 input[type='checkbox'] {
+	display: none;
+	visibility: hidden;
+}
+
+.checkbox-wrapper-65 input[type='checkbox']:checked + .cbx {
+	background-color: #606062;
+	background-image: linear-gradient(#2584d2, #1d52c1);
+}
+
+.checkbox-wrapper-65 input[type='checkbox']:checked + .cbx svg {
+	stroke-dashoffset: 0;
+	transition: all 0.15s ease;
+}
+
+/* Botón inactivo */
+.tab-button {
+	background-color: transparent;
+	color: rgba(55, 65, 81, 0.5);
+	border: none;
+	border-radius: 9999px;
+	transition: all 0.3s ease;
+}
+
+/* Botón activo */
+.active-tab {
+	background-color: #ffffff; /* Blanco */
+	color: #1b58cd; /* Azul */
+	/* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+/*Noticias*/
+.cardNoticias {
+	max-width: 400px;
+	width: 100%;
+	height: 440px;
+	padding: 20px 20px;
+	border-radius: 20px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: start;
+	justify-items: start;
+}
+.etiquetaNoticias {
+	width: fit-content;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	border-radius: 20px;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 20px;
+	letter-spacing: -0.5px;
+	padding: 6px 20px;
+}
+
+/*Linea nosotros*/
+
+.span-line {
+	position: relative; /* Necesario para posicionar los pseudo-elementos */
+}
+
+.span-line::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 38%; /* Coloca el círculo al inicio de la línea */
+	transform: translateY(-50%); /* Centra el círculo verticalmente */
+	width: 10px; /* Tamaño del círculo */
+	height: 10px; /* Tamaño del círculo */
+	border-radius: 50%; /* Hace que el elemento sea redondo */
+	background-color: #fff; /* Color del círculo */
+}
+.span-line::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 40%; /* Coloca la línea al lado derecho del círculo */
+	transform: translateY(-50%);
+	height: 0; /* Asegura que no haya altura, porque se usa border */
+	width: 100%; /* Longitud de la línea */
+	border-top: 0.12rem dashed #fff; /* Línea tipo dashed */
+}
+
+/*disabled arrow*/
+.swiper-button-disabled {
+	opacity: 0.3; /* Atenuar los botones */
+	pointer-events: none; /* Deshabilitar la interacción */
+	cursor: not-allowed; /* Cambiar el cursor a "no permitido" */
+}
+/*Custom-arrow*/
+.custom-swiper-button {
+	/* border: 1px solid #2b3688;  */
+	color: #000; /* Color del icono */
+	width: 70px; /* Ancho del botón */
+	height: 70px; /* Alto del botón */
+	border-radius: 50%; /* Botón redondo */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background-color: #1b58cd;
+	transition: background-color 0.3s, transform 0.2s;
+}
+
+/* .custom-prev-historia,
+.custom-next-historia {
+	position: static !important;
+} */
+
+/*arrow*/
+.custom-prev-product {
+	position: absolute;
+	left: 0%;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 20;
+}
+
+.custom-next-product {
+	position: absolute;
+	right: 0%;
+	top: 50%;
+	transform: translateY(-50%);
+
+	z-index: 20;
+}
+/* 
+.custom-prev-historia {
+	left: 50%; 
+	top: 560px;
+}
+
+.custom-next-historia {
+	right: 60%; 
+	top: 560px;
+} */
+
+/* index line */
+
+.line-wrapper::before,
+.line-wrapper::after {
+	content: '';
+	top: 50%;
+	width: 100%; /* Ajusta el tamaño de las líneas */
+	height: 1px; /* Grosor de la línea */
+	background-color: #fff; /* Color de la línea */
+	opacity: 0.2;
+}
+
+.line-wrapper::before {
+	transform: translateY(-50%);
+}
+
+.line-wrapper::after {
+	transform: translateY(-50%);
+}
+
+/*Sombra card home*/
+.products-div {
+	position: relative;
+}
+
+.products-div::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 150px;
+	height: 100%;
+	pointer-events: none;
+	z-index: 10;
+	left: 0;
+	background: linear-gradient(to right, #fff 20%, rgba(248, 248, 248, 0));
+}
+
+.noticiasHome {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+}
+
+.noticiasHome::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 50px;
+	height: 100%;
+	pointer-events: none;
+	z-index: 10;
+	left: 0;
+	background: linear-gradient(to right, #ddf2fb 10%, rgba(248, 248, 248, 0));
+}
+/*Nav*/
+.container-links a {
+	color: #fff;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 30.913px; /* 171.741% */
+}
+.scrolltop {
+	position: fixed;
+	background-color: #1b58cd;
+	height: 80px;
+	width: 100%;
+	top: -80px;
+	transform: translateY(100%);
+	transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+		opacity 0.6s ease-in-out;
+}
+
+.scrolltop .menu__link::before {
+	bottom: -1.55rem !important;
+}
+
+/*efecto de link*/
+.menu__link {
+	color: #1aa9e3;
+	position: relative;
+}
+
+.menu__link::before {
+	content: '';
+	width: 0;
+	height: 6px;
+	border-radius: 2px;
+	background-color: #1aa9e3;
+	position: absolute;
+	bottom: -1.55rem;
+	right: 0;
+	transition: right 0.45s, width 0.45s, left 0.45s;
+}
+
+.menu__link:hover::before {
+	width: 100%;
+	left: 0;
+}
+
+/*link active*/
+.menu__link.active::before {
+	width: 100%; /* La línea ocupa todo el ancho del enlace */
+}
+
+/*footer*/
+.bg-footer {
+	background-color: #212c56;
+}
+.footer-line {
+	height: 150px;
+	border-right: 1px solid #1aa9e3;
+	opacity: 0.2;
+	border-radius: 100%;
+}
+
+/*accordion*/
+
+.accordion .accordion-item {
+	border-bottom: 1px solid #ffffffe1;
+}
+.accordion .accordion-item button[aria-expanded='true'] {
+	border-bottom: 1px solid white;
+}
+.accordion button {
+	position: relative;
+	display: block;
+	text-align: left;
+	width: 100%;
+	padding: 1em 0;
+	color: white;
+	font-size: 16px;
+	font-weight: 300;
+	border: none;
+	background: none;
+	outline: none;
+}
+.accordion button:hover,
+.accordion button:focus {
+	cursor: pointer;
+	color: white;
+}
+.accordion button:hover::after,
+.accordion button:focus::after {
+	cursor: pointer;
+	color: white;
+	border: 1px solid white;
+}
+.accordion button .accordion-title {
+	padding: 1em 1.5em 1em 0;
+}
+.accordion button .icon {
+	display: inline-block;
+	position: absolute;
+	top: 18px;
+	right: 0;
+	width: 22px;
+	height: 22px;
+	border: 1px solid;
+	border-radius: 22px;
+}
+.accordion button .icon::before {
+	display: block;
+	position: absolute;
+	content: '';
+	top: 9px;
+	left: 5px;
+	width: 10px;
+	height: 2px;
+	background: currentColor;
+}
+.accordion button .icon::after {
+	display: block;
+	position: absolute;
+	content: '';
+	top: 5px;
+	left: 9px;
+	width: 2px;
+	height: 10px;
+	background: currentColor;
+}
+.accordion button[aria-expanded='true'] {
+	color: white;
+}
+.accordion button[aria-expanded='true'] .icon::after {
+	width: 0;
+}
+.accordion button[aria-expanded='true'] + .accordion-content {
+	opacity: 1;
+	max-height: 100%;
+	transition: all 200ms linear;
+	will-change: opacity;
+	padding: 20px 0;
+}
+.accordion .accordion-content {
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: opacity 200ms linear;
+	will-change: opacity, max-height;
+	font-size: 14px;
+	font-weight: 300;
+	color: white;
+}
+
+/*Fin accordion*/
+
+@media (max-width: 1680px) {
+	.bannerNosotros,
+	.bannerContacto,
+	.bannerMarcas,
+	.bannerResponsabilidad,
+	.bannerLegal {
+		background-size: cover;
+		max-width: calc(100% - 60px);
+		height: 350px;
+	}
+}
+
+@media (max-width: 1280px) {
+	.bannerHome {
+		background-position: right 60% center;
+	}
+	.bannerNosotros,
+	.bannerContacto,
+	.bannerMarcas,
+	.bannerResponsabilidad,
+	.bannerLegal {
+		background-size: cover;
+		max-width: calc(100% - 48px);
+		height: 350px;
+	}
+
+	.fondoMapa {
+		background-size: cover;
+		background-position: right -250px bottom 50%;
+		max-width: 650px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.bannerHome {
+		background-size: cover;
+		background-position: right 0% center;
+		height: 620px;
+	}
+
+	.bannerNosotros,
+	.bannerContacto,
+	.bannerMarcas,
+	.bannerResponsabilidad,
+	.bannerLegal {
+		background-size: cover;
+		max-width: calc(100% - 48px);
+		height: 350px;
+	}
+	.subtitulo {
+		font-size: 60px;
+		letter-spacing: -1px;
+		line-height: 45px;
+	}
+	.span-line::before {
+		left: 55%; /* Coloca el círculo al inicio de la línea */
+	}
+	.span-line::after {
+		left: 57%; /* Coloca la línea al lado derecho del círculo */
+	}
+	.fondoMapa {
+		background-size: cover;
+		background-position: right -300px bottom 50%;
+		max-width: 650px;
+	}
+}
+
+@media (max-width: 768px) {
+	.bannerNosotros,
+	.bannerMarcas,
+	.bannerContacto,
+	.bannerResponsabilidad,
+	.bannerLegal {
+		background-size: cover;
+		max-width: calc(100% - 36px);
+		height: 300px;
+	}
+	.subtitulo {
+		font-size: 30px;
+		font-weight: 700;
+		letter-spacing: -1px;
+	}
+	.descripcion-v1 {
+		font-size: 14px;
+	}
+
+	.span-line-mobile {
+		position: relative;
+	}
+	.span-line-mobile::before {
+		content: '';
+		position: absolute;
+		top: 100%; /* Centra el círculo verticalmente */
+		left: 50%; /* Alinea el círculo al centro horizontal */
+		transform: translateX(-50%); /* Ajusta tanto en el eje X como Y */
+		width: 8px; /* Tamaño del círculo */
+		height: 8px; /* Tamaño del círculo */
+		border-radius: 50%; /* Hace que el elemento sea redondo */
+		background-color: #fff; /* Color del círculo */
+	}
+
+	.span-line-mobile::after {
+		content: '';
+		position: absolute;
+		top: 100%; /* Inicia desde el borde superior */
+		left: 50%; /* Coloca la línea en el centro horizontal */
+		transform: translateX(-50%); /* Centra la línea horizontalmente */
+		height: 100%; /* Longitud de la línea vertical */
+		width: 0; /* Sin ancho, porque usamos border */
+		border-left: 0.12rem dashed #fff; /* Línea vertical tipo dashed */
+	}
+	.line-container {
+		display: flex;
+		justify-content: center; /* Centra la línea horizontalmente */
+		align-items: center; /* Centra la línea verticalmente */
+		height: 100%;
+		margin-top: 4px;
+	}
+
+	.vertical-line {
+		border: none; /* Elimina los bordes predeterminados */
+		border-left: 2px dashed #fff; /* Crea una línea vertical */
+		height: 100%; /* Ocupa toda la altura del contenedor */
+		width: 0; /* El ancho es 0, ya que solo usamos border */
+	}
+	.fondoMapa {
+		/* background-size: 200% 100%; */
+		background-position: 0% center;
+		width: 100%;
+		/* background-position: right -500px bottom 50%; */
+		max-width: 100%;
+	}
+}
+@media (max-width: 450px) {
+	.bannerNosotros,
+	.bannerContacto,
+	.bannerMarcas,
+	.bannerResponsabilidad,
+	.bannerLegal {
+		height: 250px;
+	}
+	.subtitulo {
+		font-size: 30px;
+		font-weight: 700;
+		letter-spacing: -1px;
+	}
+	.fondoMapa {
+		/* background-position: right -650px top 100%; */
+		background-size: 250% 100%;
+		background-position: 6% center;
+		width: 100%;
+		/* background-position: right -500px bottom 50%; */
+		max-width: 100%;
+	}
+}
